@@ -1,0 +1,10 @@
+{
+  "name": "3d-html",
+  "version": "0.0.3",
+  "type": "module",
+  "dependencies": {
+    "@tweenjs/tween.js": "^18",
+    "html-to-image": "^1.10.8",
+    "three": "^0.145.0"
+  }
+}

@@ -1,0 +1,28 @@
+.loading{
+  opacity: 0;
+}
+.cubeUIFace{
+  display:inline-block;
+  width:220px;
+  height:200px;
+  background-color: white;
+}
+canvas {
+  position: absolute;
+}
+.cubeUIContainer{
+  display: inline-block;
+}
+.hide{
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  left:0;
+}
+.hide2{
+  opacity: 0;
+  z-index: -1;
+}
+.preventSelect{
+  user-select: none;
+}
