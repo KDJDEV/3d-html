@@ -1,6 +1,6 @@
 {
   "name": "3d-html",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "type": "module",
   "dependencies": {
     "@tweenjs/tween.js": "^18",
@@ -12,5 +12,6 @@
     "url": "https://github.com/KDJDEV/3d-html"
   },
   "description": "Display HTML on the faces of a 3d cube that can be rotated with the cursor.",
-  "license":"MIT"
+  "license":"MIT",
+  "keywords": ["3d-html", "three.js", "javascript", "3d", "html", "webgl", "webgl2", "canvas", "cube", "UI"]
 }
