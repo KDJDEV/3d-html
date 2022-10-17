@@ -3,7 +3,7 @@ Display HTML on the faces of a 3d cube that can be rotated with the cursor.
 
 ## Demo
 See a demonstration of the project here:
-[kdjdev.github.io/3d-html/](kdjdev.github.io/3d-html/)
+[https://kdjdev.github.io/3d-html/](https://kdjdev.github.io/3d-html/)
 
 ## Installation
 ### Using npm:
