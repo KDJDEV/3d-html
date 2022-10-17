@@ -11,10 +11,11 @@ See a demonstration of the project here:
 npm install 3d-html
 ```
 ### or using yarn:
-```
-sh yarn add 3d-html
+```sh
+yarn add 3d-html
 ```
 
+## Usage
 Once the package is installed, you then need to setup your cube. Represent the cube in HTML by including a `div` tag with class `cubeUIContainer` somewhere in the DOM. It is also recommended that you apply the `loading` class, which will attempt to hide the container using CSS before the cube is ready.
 ```html
 <div class="cubeUIContainer loading">
@@ -70,4 +71,5 @@ initialize();
 ```
 If you are using some javascript framework instead of vanilla, you may not be able to run the initialize function inside of an HTML `script` tag, but must run it elsewhere.
 
-Documentation in progress...
+## Limitations
+Under the hood, 3d-html turns the DOM into images with [html-to-image](https://github.com/bubkoo/html-to-image), and then applies those images to the face of a cube using [three.js](https://github.com/mrdoob/three.js/). Because of this implementation, anything that moves like videos or animated images will not continue to move when the cube turns. Changes in the DOM itself should be fine most of the time, as 3d-html attempts to recreate cube materials when it detects changes in related DOM.
