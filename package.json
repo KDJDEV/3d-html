@@ -6,5 +6,11 @@
     "@tweenjs/tween.js": "^18",
     "html-to-image": "^1.10.8",
     "three": "^0.145.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KDJDEV/3d-html"
+  },
+  "description": "Display HTML on the faces of a 3d cube that can be rotated with the cursor.",
+  "license":"MIT"
 }

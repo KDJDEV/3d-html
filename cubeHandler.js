@@ -13,6 +13,9 @@ function createCube(container, setActiveFace, size, dragFunctions) {
     }
 
     let faces = Array.from(container.children);
+    if (faces.length !== 4){
+        console.error(`You must specify 4 cubeUIFaces for the cube. You currently have ${faces.length} faces.`);
+    }
     function hideFaces(bool) {
         for (let face of faces) {
             if (bool) {
@@ -58,7 +61,7 @@ function createCube(container, setActiveFace, size, dragFunctions) {
     container.onpointerdown = drag;
     function move(e) {
         var deltaMove = {
-            x: e.offsetX - previousMousePosition.x
+            x: e.offsetX - (previousMousePosition.x || e.offsetX)
         };
         function inputFocused() {
             for (let element of document.getElementsByTagName("input")) {
@@ -77,8 +80,7 @@ function createCube(container, setActiveFace, size, dragFunctions) {
         }
 
         previousMousePosition = {
-            x: e.offsetX,
-            y: e.offsetY
+            x: e.offsetX
         };
     }
     renderer.domElement.onmousemove = move;
@@ -88,8 +90,7 @@ function createCube(container, setActiveFace, size, dragFunctions) {
         e.preventDefault();
         var bcr = e.target.getBoundingClientRect();
         var x = e.targetTouches[0].clientX - bcr.x;
-        var y = e.targetTouches[0].clientY - bcr.y;
-        move({ offsetX:x, offsetY:x});
+        move({ offsetX:x});
     }
     renderer.domElement.ontouchmove = mobileMove;
     container.ontouchmove = mobileMove;
